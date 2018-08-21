@@ -1,0 +1,26 @@
+
+.buttons {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.2em;
+  padding: .2em;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.timer {
+  padding-top: 1em;
+  font-size: 5em;
+  font-weight: bold;
+  color: red;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.break-time {
+  font-size: 3em;
+  color: green;
+}

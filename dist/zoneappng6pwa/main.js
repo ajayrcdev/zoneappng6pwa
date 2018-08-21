@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n.buttons {\n  width: 100%;\n  margin: 0 auto;\n  font-size: 1.2em;\n  padding: .2em;\n}\n\n.title {\n  font-size: 2em;\n}\n\n.timer {\n  padding-top: 1em;\n  font-size: 5em;\n  font-weight: bold;\n  color: red;\n  margin: 0 auto;\n  width: 100%;\n  text-align: center;\n}\n\n.break-time {\n  font-size: 3em;\n  color: green;\n}\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<mat-card class=\"example-card\">\n  <mat-card-header>\n    <!-- <div mat-card-avatar class=\"example-header-image\"></div>\n    <mat-card-title>Shiba Inu</mat-card-title>\n    <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->\n  </mat-card-header>\n  <!-- <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"> -->\n  <mat-card-content>\n    <div *ngIf=\"countDownTimeLeft\">\n        <h3>Hello, I know you are trying to reach me, but I am in ZONE right now! I will be free in </h3>\n        <h1> {{countDownTimeLeft | date:'mm:ss'}}</h1>\n    </div>\n    <div *ngIf=\"!countDownTimeLeft\">\n      <span>Hurry up! you have <span>{{countUpTimeLeft | date:'mm:ss'}}</span> left before I go back to Zone! </span>\n    </div>\n  </mat-card-content>\n  <mat-card-actions *ngIf=\"countDownTimeLeft\">\n    <button mat-raised-button color=\"primary\" (click)=\"restart()\">RESTART</button>\n    <button mat-raised-button color=\"accent\" (click)=\"toggle()\">\n      <ng-container *ngIf=\"paused\">START</ng-container>\n      <ng-container *ngIf=\"!paused\">PAUSE</ng-container>\n    </button>\n  </mat-card-actions>\n</mat-card>\n\n\n\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<mat-card class=\"example-card\">\n  <mat-card-header>\n    <!-- <div mat-card-avatar class=\"example-header-image\"></div>\n    <mat-card-title>Shiba Inu</mat-card-title>\n    <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->\n  </mat-card-header>\n  <!-- <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"> -->\n  <mat-card-content>\n    <div *ngIf=\"countDownTimeLeft\">\n        <span class=\"title\">Hello, I know you are trying to reach me, but I am in ZONE right now! I will be free in </span>\n        <br/>\n        <div class=\"timer\"> {{countDownTimeLeft | date:'mm:ss'}}</div>\n    </div>\n    <div *ngIf=\"!countDownTimeLeft\">\n      <span class=\"title\">Hurry up! you have <span class=\"break-time\">{{countUpTimeLeft | date:'mm:ss'}}</span> minutes left before I go back to The Zone! </span>\n    </div>\n  </mat-card-content>\n  <mat-card-actions *ngIf=\"countDownTimeLeft\">\n    <br/>\n    <br/>\n    <button mat-raised-button color=\"primary\" (click)=\"restart()\" class=\"buttons\">RESTART</button>\n    <br/>\n    <br/>\n    <button mat-raised-button color=\"accent\" (click)=\"toggle()\" class=\"buttons\">\n      <ng-container *ngIf=\"paused\">START</ng-container>\n      <ng-container *ngIf=\"!paused\">PAUSE</ng-container>\n    </button>\n  </mat-card-actions>\n</mat-card>\n\n\n\n\n"
 
 /***/ }),
 

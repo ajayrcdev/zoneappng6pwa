@@ -8,16 +8,21 @@
   <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
   <mat-card-content>
     <div *ngIf="countDownTimeLeft">
-        <h3>Hello, I know you are trying to reach me, but I am in ZONE right now! I will be free in </h3>
-        <h1> {{countDownTimeLeft | date:'mm:ss'}}</h1>
+        <span class="title">Hello, I know you are trying to reach me, but I am in ZONE right now! I will be free in </span>
+        <br/>
+        <div class="timer"> {{countDownTimeLeft | date:'mm:ss'}}</div>
     </div>
     <div *ngIf="!countDownTimeLeft">
-      <span>Hurry up! you have <span>{{countUpTimeLeft | date:'mm:ss'}}</span> left before I go back to Zone! </span>
+      <span class="title">Hurry up! you have <span class="break-time">{{countUpTimeLeft | date:'mm:ss'}}</span> minutes left before I go back to The Zone! </span>
     </div>
   </mat-card-content>
   <mat-card-actions *ngIf="countDownTimeLeft">
-    <button mat-raised-button color="primary" (click)="restart()">RESTART</button>
-    <button mat-raised-button color="accent" (click)="toggle()">
+    <br/>
+    <br/>
+    <button mat-raised-button color="primary" (click)="restart()" class="buttons">RESTART</button>
+    <br/>
+    <br/>
+    <button mat-raised-button color="accent" (click)="toggle()" class="buttons">
       <ng-container *ngIf="paused">START</ng-container>
       <ng-container *ngIf="!paused">PAUSE</ng-container>
     </button>
